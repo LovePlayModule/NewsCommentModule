@@ -14,6 +14,7 @@
 - (UIViewController *)Action_viewController:(NSDictionary *)params
 {
     NewsCommentViewController *viewController = [[NewsCommentViewController alloc] init];
+    viewController.newsID = params[@"newsIDKey"];
     return viewController;
 }
 

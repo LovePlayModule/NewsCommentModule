@@ -68,9 +68,9 @@ TODO: Add long description of NewsCommentModule.
     ss.dependency 'NewsCommentModule/Controller'
   end
 
-  s.resource_bundles = {
-    'NewsCommentModule' => ['NewsCommentModule/Assets/*']
-  }
+  # s.resource_bundles = {
+  #   'NewsCommentModule' => ['NewsCommentModule/Assets/*']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
