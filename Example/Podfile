@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NewsCommentModule_Example' do
+  pod 'NewsCommentModule', :path => '../'
+
+  target 'NewsCommentModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
