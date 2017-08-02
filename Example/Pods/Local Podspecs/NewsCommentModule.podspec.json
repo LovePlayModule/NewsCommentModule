@@ -1,0 +1,91 @@
+{
+  "name": "NewsCommentModule",
+  "version": "0.1.0",
+  "summary": "NewsCommentModule.",
+  "description": "TODO: Add long description of NewsCommentModule.",
+  "homepage": "https://github.com/LovePlayModule/NewsCommentModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "YunsChou": "2647754496@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/LovePlayModule/NewsCommentModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "default_subspecs": [
+    "Model",
+    "View",
+    "Controller",
+    "Targets"
+  ],
+  "resource_bundles": {
+    "NewsCommentModule": [
+      "NewsCommentModule/Assets/*"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Model",
+      "source_files": "NewsCommentModule/Classes/Model/**/*",
+      "dependencies": {
+        "YYKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "View",
+      "source_files": "NewsCommentModule/Classes/View/**/*",
+      "dependencies": {
+        "Tools": [
+
+        ],
+        "YYKit": [
+
+        ],
+        "Masonry": [
+
+        ],
+        "NewsCommentModule/Model": [
+
+        ]
+      }
+    },
+    {
+      "name": "Controller",
+      "source_files": "NewsCommentModule/Classes/Controller/**/*",
+      "dependencies": {
+        "Tools": [
+
+        ],
+        "YYKit": [
+
+        ],
+        "Network": [
+
+        ],
+        "NewsCommentModule/Model": [
+
+        ],
+        "NewsCommentModule/View": [
+
+        ]
+      }
+    },
+    {
+      "name": "Targets",
+      "source_files": "NewsCommentModule/Classes/Targets/**/*",
+      "dependencies": {
+        "NewsCommentModule/Controller": [
+
+        ]
+      }
+    }
+  ]
+}

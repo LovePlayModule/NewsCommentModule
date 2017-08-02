@@ -1,0 +1,1 @@
+../../../../../NewsCommentModule/Classes/Targets/Target_NewsComment.h
