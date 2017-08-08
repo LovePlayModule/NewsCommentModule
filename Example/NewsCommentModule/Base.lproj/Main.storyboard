@@ -1,11 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RYB-Gi-hIU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="vEm-QT-fsH">
+            <objects>
+                <navigationController id="RYB-Gi-hIU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVZ-hn-tv8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="evQ-7o-SkZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1OQ-Ox-dXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-496" y="16"/>
+        </scene>
+        <!--Lp View Controller-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="LpViewController" sceneMemberID="viewController">
@@ -14,14 +34,45 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CRA8395J00318P3Q" borderStyle="roundedRect" placeholder="新闻ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-yK-xye">
+                                <rect key="frame" x="50" y="164" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-kB-DHA">
+                                <rect key="frame" x="100" y="294" width="175" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sXf-CA-AuS"/>
+                                </constraints>
+                                <state key="normal" title="点击进入新闻评论"/>
+                                <connections>
+                                    <action selector="pushToNext:" destination="whP-gf-Uak" eventType="touchUpInside" id="7Bb-vB-Fn2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aco-yK-xye" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="50" id="LF8-M7-u1o"/>
+                            <constraint firstItem="Aco-yK-xye" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="100" id="joc-tQ-VQl"/>
+                            <constraint firstAttribute="trailing" secondItem="lS4-kB-DHA" secondAttribute="trailing" constant="100" id="t15-Ux-wbR"/>
+                            <constraint firstAttribute="trailing" secondItem="Aco-yK-xye" secondAttribute="trailing" constant="50" id="vMK-cL-hkc"/>
+                            <constraint firstItem="lS4-kB-DHA" firstAttribute="top" secondItem="Aco-yK-xye" secondAttribute="bottom" constant="100" id="vje-jo-G2d"/>
+                            <constraint firstItem="lS4-kB-DHA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="100" id="xNw-5B-XNm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GUq-Ik-o5N"/>
+                    <connections>
+                        <outlet property="newsIDTextField" destination="Aco-yK-xye" id="yln-65-xLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="260" y="16"/>
         </scene>
     </scenes>
 </document>
